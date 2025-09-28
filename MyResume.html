@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ahmed Tanveer – Resume Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .resume-container {
+      display: flex;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      width: 100%;
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #0066cc;
+      color: #fff;
+      width: 280px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .sidebar img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar img:hover {
+      transform: scale(1.05);
+    }
+
+    .sidebar h1 {
+      font-size: 22px;
+      margin: 10px 0 5px;
+    }
+
+    .sidebar h2 {
+      font-size: 14px;
+      font-weight: normal;
+      color: #dbe9ff;
+      margin: 0 0 20px;
+      min-height: 40px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #fff;
+      background: #004080;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .sidebar a:hover {
+      background: #ff6600;
+      transform: translateY(-2px);
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff6600;
+      color: #fff;
+      padding: 10px 15px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #e65500;
+      transform: scale(1.05);
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h3 {
+      font-size: 20px;
+      color: #0066cc;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    p, li, td, th {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    ul, ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+
+    /* Dark mode */
+    body.dark {
+      background: #121212;
+      color: #eee;
+    }
+
+    body.dark .resume-container {
+      background: #1e1e1e;
+    }
+
+    body.dark .sidebar {
+      background: #222;
+    }
+
+    body.dark .sidebar a {
+      background: #333;
+      color: #ffcc00;
+    }
+
+    body.dark .sidebar a:hover {
+      background: #ff6600;
+      color: #fff;
+    }
+
+    body.dark .section h3 {
+      color: #ffcc00;
+      border-color: #444;
+    }
+
+    body.dark th, body.dark td {
+      border: 1px solid #444;
+      color: #ddd;
+    }
+
+    body.dark .btn {
+      background: #ffcc00;
+      color: #222;
+    }
+
+    body.dark .btn:hover {
+      background: #ffaa00;
+    }
+
+    .typing {
+      display: inline-block;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+  <div class="sidebar">
+    <img src="https://via.placeholder.com/140" alt="Profile Picture">
+    <h1>Ahmed Tanveer</h1>
+    <h2 id="typing" class="typing"></h2>
+
+    <a href="mailto:fireflies5743@gmail.com">📧 fireflies5743@gmail.com</a>
+    <a href="tel:+9232254040430">📞 +92 322 54040430</a>
+    <a href="https://www.linkedin.com/in/ahmed-tanveer-47321b36b/" target="_blank">🔗 LinkedIn</a>
+    <a href="https://github.com/Ahmed487549" target="_blank">💻 GitHub</a>
+
+    <button class="btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    <button class="btn" onclick="downloadResume()">⬇️ Download Resume</button>
+  </div>
+
+  <div class="main-content">
+    <div class="section">
+      <h3>About (Summary)</h3>
+      <p>
+        Motivated and energetic <strong>Software Engineering student</strong> with hands-on experience in 
+        <strong>web development basics, Amazon virtual assistance, and sales communication</strong>.  
+        Skilled in product research, customer interaction, and problem-solving.  
+        Strong adaptability and eager to apply technical knowledge to real-world projects while continuing to grow as a professional in the IT field.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Experience</h3>
+      <ul>
+        <li>
+          <strong>Sales Representative – Call Center (Year – Year)</strong><br>
+          Assisted clients by providing product information and closing sales through effective communication.<br>
+          Achieved targets by building strong customer relationships.<br>
+          Developed strong persuasion and negotiation skills.
+        </li>
+        <br>
+        <li>
+          <strong>Amazon Virtual Assistant (Freelance/Part-Time) (Year – Present)</strong><br>
+          Specialized in product hunting and marketplace research.<br>
+          Supported sellers with account management and listing improvements.<br>
+          Gained experience with online tools for product and keyword research.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Education</h3>
+      <table>
+        <tr>
+          <th>Year</th>
+          <th>Education</th>
+        </tr>
+        <tr>
+          <td>2019</td>
+          <td>Matriculation</td>
+        </tr>
+        <tr>
+          <td>2019 - 2021</td>
+          <td>Intermediate (College)</td>
+        </tr>
+        <tr>
+          <td>2022 - Present</td>
+          <td>Bachelor of Software Engineering – Virtual University</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>Skills</h3>
+      <ul>
+        <li><strong>Technical:</strong> Web Development (HTML, CSS, basics of JavaScript)</li>
+        <li><strong>Technical:</strong> Amazon Virtual Assistance (Product Hunting, Research, Listing Optimization)</li>
+        <li><strong>Soft Skills:</strong> Communication & Sales</li>
+        <li><strong>Soft Skills:</strong> Problem-Solving</li>
+        <li><strong>Soft Skills:</strong> Team Collaboration</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Hobbies</h3>
+      <ol>
+        <li>Traveling</li>
+        <li>Reading</li>
+        <li>Gaming</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+  }
+
+  function downloadResume() {
+    alert("Your resume download will start. (You can link a real PDF file here)");
+    // Example: window.open("resume.pdf", "_blank");
+  }
+
+  const typingElement = document.getElementById("typing");
+  const roles = [
+    "📌 Aspiring Software Engineer",
+    "💻 Web Development Enthusiast",
+    "📦 Amazon Virtual Assistant",
+    "🎤 Strong Communication Skills"
+  ];
+  let roleIndex = 0;
+  let charIndex = 0;
+  let currentText = "";
+  let isDeleting = false;
+
+  function typeEffect() {
+    const fullText = roles[roleIndex];
+
+    if (isDeleting) {
+      currentText = fullText.substring(0, charIndex--);
+    } else {
+      currentText = fullText.substring(0, charIndex++);
+    }
+
+    typingElement.textContent = currentText;
+
+    if (!isDeleting && charIndex === fullText.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeEffect, 200);
+    } else {
+      setTimeout(typeEffect, isDeleting ? 50 : 100);
+    }
+  }
+
+  typeEffect();
+</script>
+
+</body>
+</html>
